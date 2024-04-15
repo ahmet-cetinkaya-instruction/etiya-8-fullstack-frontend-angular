@@ -1,5 +1,9 @@
 <app-navbar></app-navbar>
 {{ title }}
+<app-button variant="warning" (buttonClick)="onButtonClick()">
+  <!-- <ng-content></ng-content> -->
+  Button
+</app-button>
 
 <ul>
   <!-- < Angular 17 -->
@@ -15,14 +19,10 @@
   <!-- >= Angular 17 -->
   @for(product of products; track product.name) {
     @if(!product.discontinued) {
-      <li>
-        {{ product.name }} - {{ product.price }}
-      </li>
+      <li>{{ product.name }} - {{ product.price }}</li>
     }
     @else {
-      <li>
-        {{ product.name }} discontinued.
-      </li>
+      <li>{{ product.name }} discontinued.</li>
     }
   }
 </ul>
