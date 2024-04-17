@@ -1,10 +1,7 @@
 <app-home-layout>
-
-  <app-brand-list-group></app-brand-list-group>
-
   <!-- <ul> -->
-    <!-- < Angular 17 -->
-<!--     <ng-container *ngFor="let product of products">
+  <!-- < Angular 17 -->
+  <!--     <ng-container *ngFor="let product of products">
       <li *ngIf="!product.discontinued; else discontinuedElse">
         {{ product.name }} - {{ product.price }}
       </li>
@@ -13,8 +10,8 @@
       </ng-template>
     </ng-container> -->
 
-    <!-- >= Angular 17 -->
-    <!-- @for(product of products; track product.name) {
+  <!-- >= Angular 17 -->
+  <!-- @for(product of products; track product.name) {
       @if(!product.discontinued) {
         <li>{{ product.name }} - {{ product.price }}</li>
       }
@@ -23,4 +20,7 @@
       }
     }
   </ul> -->
+  <app-brand-list-group
+    (selectBrand)="onSelectBrand($event)"
+  ></app-brand-list-group>
 </app-home-layout>

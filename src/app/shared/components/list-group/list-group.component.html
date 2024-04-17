@@ -1,0 +1,14 @@
+<ul class="list-group">
+  @for (item of items; track $index) {
+    <li
+      class="list-group-item"
+      [ngClass]="{ active: $index === selectedIndex}"
+      [ariaCurrent]="$index === selectedIndex ? 'true' : null"
+      [routerLink]="item.routerLink"
+      (click)="onClick(item)"
+    >
+      {{ item.label }}
+    </li>
+    <!-- [attr.aria-current] -->
+  }
+</ul>

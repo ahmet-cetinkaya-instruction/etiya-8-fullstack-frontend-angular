@@ -5,10 +5,23 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
 import { HomeLayoutComponent } from './components/home-layout/home-layout.component';
 import { RouterModule } from '@angular/router';
+import { ListGroupComponent } from './components/list-group/list-group.component';
 
 @NgModule({
-  declarations: [NavbarComponent, FooterComponent, ButtonComponent, HomeLayoutComponent],
+  declarations: [
+    NavbarComponent,
+    FooterComponent,
+    ButtonComponent,
+    HomeLayoutComponent,
+    ListGroupComponent,
+  ],
   imports: [CommonModule, RouterModule],
-  exports: [NavbarComponent, FooterComponent, ButtonComponent, HomeLayoutComponent]
+  exports: [
+    NavbarComponent,
+    FooterComponent,
+    ButtonComponent,
+    HomeLayoutComponent,
+    ListGroupComponent,
+  ],
 })
 export class SharedModule {}
