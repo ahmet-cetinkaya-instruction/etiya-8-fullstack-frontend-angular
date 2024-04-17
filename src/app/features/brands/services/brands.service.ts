@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { Observable } from 'rxjs';
 import { GetBrandsListResponse } from '../models/get-brands-list-response';
+import { CreateBrandRequest } from '../models/create-brand-request';
+import { CreateBrandResponse } from '../models/create-brand-response';
 
 @Injectable({
   providedIn: 'root',
@@ -16,13 +18,15 @@ export class BrandsService {
   // }
   constructor(private http: HttpClient) {}
 
-  getList() : Observable<GetBrandsListResponse> {
+  getList(): Observable<GetBrandsListResponse> {
     return this.http.get<GetBrandsListResponse>(this.apiControllerUrl);
   }
 
   // getById(id: number) {}
 
-  // create(data: any) {}
+  create(request: CreateBrandRequest): Observable<CreateBrandResponse> {
+    return this.http.post<CreateBrandResponse>(this.apiControllerUrl, request);
+  }
 
   // update(id: number, data: any) {}
 

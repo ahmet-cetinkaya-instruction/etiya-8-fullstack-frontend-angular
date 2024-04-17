@@ -1,0 +1,10 @@
+<form [formGroup]="form" (submit)="onFormSubmit()">
+  <app-input-field label="Name" id="name" [required]="true">
+    <input type="text" id="name" name="name" formControlName="name" required />
+  </app-input-field>
+
+  @if (formMessage) {
+    <small class="text-danger d-block">{{formMessage}}</small>
+  }
+  <app-button type="submit">Create</app-button>
+</form>
